@@ -1,0 +1,164 @@
+#some stuff is from https://github.com/github/gitignore
+#java specific
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+#maven
+target/*
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/*
+gen/*
+
+#netbeans ignore personal stuff 
+nbproject/private/*
+
+#python specific
+*.pyc
+
+#xcode specific
+build/*
+*.pbxuser
+*.mode2v3
+*.mode1v3
+*.perspective
+*.perspectivev3
+*~.nib
+
+#ignore private workspace stuff added by Xcode4
+xcuserdata
+project.xcworkspace
+
+#rails specific
+*.sqlite3
+config/database.yml
+log/*
+tmp/*
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+Thumbs.db
+
+#other SCMS
+CVS
+.hg
+.hgignore
+.svn/
+
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+#Django.gitignore
+*.log
+*.pot
+*.pyc
+local_settings.py
+
+
+#more python
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+#Translations
+*.mo
+
+#Mr Developer
+.mr.developer.cfg
+
+#grails & eclipse
+*.iws
+*Db.properties
+*Db.script
+.settings
+eclipse
+stacktrace.log
+target
+/plugins
+/web-app/plugins
+/web-app/WEB-INF/classes
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+
+
+/CVS/*
+*/CVS/*
+.cvsignore
+*/.cvsignore
+
+#vim
+.*.sw[a-z]
+*.un~
+Session.vim
