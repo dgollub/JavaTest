@@ -6,6 +6,8 @@ import javatests.Utils;
 /**
  * Test some aspects of inheritance in Java.
  * 
+ * This was an actual test question in the technical exam for a job interview.
+ * 
  */
 public class InheritanceTest {
     
