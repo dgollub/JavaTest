@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.FileStore;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import javatests.Utils;
@@ -45,6 +48,12 @@ public class Java7Tests {
         testNullHandling();
         testTryWithRessources();
         testExceptionHandling();
+        try {
+            testNIO();    
+        } catch (Exception ex) {
+            Utils.print("An exception occured: %s", ex.getMessage());
+        }
+        
         
         Utils.print(String.format("//// END   %s ////", Java7Tests.class.getSimpleName()));
     }
@@ -89,5 +98,31 @@ public class Java7Tests {
         //Utils.print("A: %s", a?.getName());
         //Utils.print("B: %s", b?.getName()); 
         Utils.print("Elvis Null Safe stuff does not work with Java 7, yet.");
+    }
+    
+    private static void testNIO() throws Exception {
+        
+        java.nio.file.FileSystem fs = java.nio.file.FileSystems.getDefault();
+        long size = 0;
+        for (FileStore fis : fs.getFileStores()) {
+            Utils.print("FileStore(%s, %s): Size (%d), Empty (%d), Useable (%d)", fis.name(), fis.type(), fis.getTotalSpace(), fis.getUnallocatedSpace(), fis.getUsableSpace());
+            size++;
+        }
+        Utils.print("FileStores: %d", size);
+        
+        Path p = fs.getPath(Utils.getCurrentWorkingDirectory());
+        Utils.print("Current working dir: %s", p.toString());
+        p = p.normalize();
+        Utils.print("Current working dir (normalized): %s", p.toString());
+        Utils.print("Owner: %s", Files.getOwner(p).getName());
+        
+        File f = p.toFile();
+        Utils.print("Files in dir: %s", f.list().length);
+        for (File tf : f.listFiles()){
+            if (tf.isDirectory())
+                Utils.print("Dir:  %s", tf.getName());
+            else
+                Utils.print("File: %s", tf.getName());
+        }
     }
 }
