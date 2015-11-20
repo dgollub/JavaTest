@@ -17,7 +17,11 @@ import javatests.Utils;
  * "answer" this kind of question, therefore there can
  * be more than one correct answer.
  * 
- * This is my attempt.
+ * This is my attempt. From 2011.
+ * 
+ * In 2015, I may solve it differently. But I am too lazy
+ * to revisit this problem any time soon as I have other
+ * more fun projects to work on.
  */
 public class MonopolyTest {
     
