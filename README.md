@@ -10,7 +10,7 @@ Daniel Kurashige-Gollub, daniel@kurashige-gollub.de, 2012-Jan-06
 
 ## INSTALLATION/BUILD/CONFIGURATION
 
-This project uses [https://docs.gradle.org/current/userguide/userguide.html](Gradle) as build system. 
+This project uses [Gradle](https://docs.gradle.org/current/userguide/userguide.html) as build system. 
 Modern IDEs like Netbeans or IntelliJ IDEA usually support this out-of-the-box.
 Or you can install Gradle manually on your system and simply run `gradle run`.
 
